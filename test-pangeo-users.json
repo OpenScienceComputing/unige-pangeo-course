@@ -1,0 +1,68 @@
+{
+    "users": [
+        {
+            "id": "ee8ca495-144f-4128-83d5-2746ce1cd909",
+            "createdTimestamp": 1712750684522,
+            "username": "rsignell@gmail.com",
+            "enabled": true,
+            "totp": false,
+            "emailVerified": false,
+            "firstName": "Rich",
+            "lastName": "Signell",
+            "email": "rsignell@gmail.com",
+            "disableableCredentialTypes": [],
+            "requiredActions": [
+                "UPDATE_PASSWORD"
+            ],
+            "notBefore": 0,
+            "credentials": [
+                {
+                    "type": "password",
+                    "value": "123"
+                }
+            ],
+            "access": {
+                "manageGroupMembership": true,
+                "view": true,
+                "mapRoles": true,
+                "impersonate": true,
+                "manage": true
+            },
+            "groups": [
+                "pangeo"
+            ]
+        },
+        {
+            "id": "6d3a74d7-60bc-48b5-99b8-c52ece3cbb35",
+            "createdTimestamp": 1712750684522,
+            "username": "andrea.lira.loarca@unige.it",
+            "enabled": true,
+            "totp": false,
+            "emailVerified": false,
+            "firstName": "Andrea",
+            "lastName": "Lira",
+            "email": "andrea.lira.loarca@unige.it",
+            "disableableCredentialTypes": [],
+            "requiredActions": [
+                "UPDATE_PASSWORD"
+            ],
+            "notBefore": 0,
+            "credentials": [
+                {
+                    "type": "password",
+                    "value": "123"
+                }
+            ],
+            "access": {
+                "manageGroupMembership": true,
+                "view": true,
+                "mapRoles": true,
+                "impersonate": true,
+                "manage": true
+            },
+            "groups": [
+                "pangeo"
+            ]
+        }
+    ]
+}
