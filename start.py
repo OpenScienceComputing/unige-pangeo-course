@@ -5,9 +5,10 @@ import subprocess
 #use first part of email address as username
 hub_user = os.environ['JUPYTERHUB_USER']
 username = hub_user.split('@')[0]
+group = 'users'
 
 # create shared folder for user
-my_shared_folder = f'/shared/users/{username}'
+my_shared_folder = f'/shared/{group}/{username}'
 
 if not os.path.exists(my_shared_folder):
     os.makedirs(my_shared_folder)
@@ -27,14 +28,14 @@ except:
 
 # copy kerchunk tutorial (and any other repos in /shared/users/repos) 
 try:
-    subprocess.run(["cp", "-R", "/shared/pangeo/repos", "."])
+    subprocess.run(["cp", "-R", f"/shared/{group}/repos", "."])
     print(f'copied repos to {my_shared_folder}')
 except:
     print(f'failed to copy repos to {my_shared_folder}')
 
 # copy bucket credentials
 try:
-    subprocess.run(["cp", "-R", "/shared/pangeo/.aws", f'/home/{hub_user}/'])
+    subprocess.run(["cp", "-R", f"/shared/{group}/nebari_setup/lib/.aws", f'/home/{hub_user}/'])
     print('copied cloud credentials')
 except:
     print('failed to copy cloud credentials')
