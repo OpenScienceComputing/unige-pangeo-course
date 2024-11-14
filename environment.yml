@@ -2,7 +2,7 @@ name: pangeo
 channels:
   - conda-forge
 dependencies:
-  - python=3.11
+  - python=3.12
   - adlfs
   - aiobotocore
   - birdy
@@ -17,12 +17,13 @@ dependencies:
   - coiled
   - curl
   - dask-geopandas
-  - dask 
+  - dask==2024.7.0
+  - dask-expr
+  - dask-mpi
   - datashader
   - datacube
   - dask-geopandas
   - depfinder
-  - distributed
   - erddapy
   - fastparquet
   - firefox
@@ -41,6 +42,7 @@ dependencies:
   - geoviews
   - gifsicle
   - graphviz
+  - gsw-xarray
   - h5netcdf
   - h5py
   - hologridgen
@@ -69,6 +71,7 @@ dependencies:
   - lz4
   - mamba
   - metpy
+  - mpi4py
   - nbgitpuller
   - nbstripout
   - nco
@@ -80,7 +83,7 @@ dependencies:
   - openpyxl
   - osmnx
   - owslib
-  - pandas == 1.5.3
+  - pandas
   - panel
   - pangeo-forge-recipes
   - papermill
@@ -115,7 +118,6 @@ dependencies:
   - rioxarray
   - scikit-image
   - s3fs
-  - seaborn
   - seawater
   - selenium
   - siphon
@@ -149,10 +151,9 @@ dependencies:
   - ghp-import
   - jsonschema-with-format-nongpl
   - webcolors
+  - xarrayutils
+  - earthaccess
   - pip:
-      - earthaccess @ git+https://github.com/nsidc/earthaccess@main
       - pangeo-forge-esgf
       - streamjoy
       - webdriver_manager
-      - xarrayutils @ git+https://github.com/rsignell/xarrayutils@patch-1
-
